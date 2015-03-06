@@ -26,4 +26,5 @@ RUN echo "root:changeme" | chpasswd
 
 # Start sshd
 EXPOSE 22 8081
-ENTRYPOINT ["/SickRage-master/SickRage.py", "--config=/config/sickrage/config.ini"]
+ENTRYPOINT ["/usr/sbin/sshd", "-D"]
+#ENTRYPOINT ["/SickRage-master/SickRage.py", "--config=/config/sickrage/config.ini"]
