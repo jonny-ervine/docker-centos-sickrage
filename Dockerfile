@@ -14,7 +14,8 @@ RUN curl -L https://github.com/SiCKRAGETV/SickRage/archive/master.zip -o /SickRa
 RUN unzip /SickRage.zip
 RUN rm -f /SickRage.zip
 
-#RUN echo "root:password" | chpasswd
+ADD supervisord.conf /etc/supervisord.conf
+ADD sickrage.ini /etc/supervisord.d/sickrage.ini
 
 VOLUME /config
 VOLUME /data
