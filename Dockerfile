@@ -22,4 +22,4 @@ VOLUME /downloads
 
 # Start sshd
 EXPOSE 8081 9003
-ENTRYPOINT ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
+ENTRYPOINT ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisord.conf"]
