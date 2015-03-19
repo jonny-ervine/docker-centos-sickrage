@@ -5,6 +5,7 @@ MAINTAINER “Jonathan Ervine” <jon.ervine@gmail.com>
 ENV container docker
 
 # Install updates, and pre-requisites for SickRage
+RUN yum install -y http://mirror.pnl.gov/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
 RUN yum update -y; yum clean all
 RUN yum install -y python-cheetah unzip supervisor
 RUN yum clean all
