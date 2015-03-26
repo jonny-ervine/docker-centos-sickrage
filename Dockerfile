@@ -17,6 +17,8 @@ RUN rm -f /SickRage.zip
 
 ADD supervisord.conf /etc/supervisord.conf
 ADD sickrage.ini /etc/supervisord.d/sickrage.ini
+ADD start.sh /usr/sbin/start.sh
+RUN chmod 755 /usr/sbin/start.sh
 
 VOLUME /config
 VOLUME /data
@@ -24,4 +26,4 @@ VOLUME /downloads
 
 # Start sshd
 EXPOSE 8081 9003
-ENTRYPOINT ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisord.conf"]
+ENTRYPOINT ["/usr/sbin/start.sh"]
