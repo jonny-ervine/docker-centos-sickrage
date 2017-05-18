@@ -11,9 +11,7 @@ RUN yum install -y python-cheetah unzip supervisor git
 RUN yum clean all
 
 # Download and extract the latest SickRage release
-RUN curl -L https://github.com/SickRage/SickRage/archive/master.zip -o /SickRage.zip
-RUN unzip /SickRage.zip
-RUN rm -f /SickRage.zip
+RUN git clone https://github.com/SickRage/SickRage.git
 
 ADD supervisord.conf /etc/supervisord.conf
 ADD sickrage.ini /etc/supervisord.d/sickrage.ini
