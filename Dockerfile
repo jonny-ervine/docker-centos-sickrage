@@ -11,7 +11,7 @@ RUN yum install -y python-cheetah unzip supervisor
 RUN yum clean all
 
 # Download and extract the latest SickRage release
-RUN curl -L https://github.com/SiCKRAGETV/SickRage/archive/master.zip -o /SickRage.zip
+RUN curl -L https://github.com/SickRage/SickRage/archive/master.zip -o /SickRage.zip
 RUN unzip /SickRage.zip
 RUN rm -f /SickRage.zip
 
