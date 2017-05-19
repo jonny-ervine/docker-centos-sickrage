@@ -6,7 +6,7 @@
 ## Initialise any variables being called:
 # Set the correct timezone
 TZ=${TZ:-UTC}
-setup=/config/sickrage/.setup
+setup=/config/.setup
 
 if [ ! -f "${setup}" ]; then
   rm -f /etc/localtime
