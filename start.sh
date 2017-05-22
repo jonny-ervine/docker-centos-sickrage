@@ -14,7 +14,7 @@ if [ ! -f "${setup}" ]; then
   rm -f /etc/localtime
   cp /usr/share/zoneinfo/$TZ /etc/localtime
   adduser -u $USERUID $USER
-  sed -i "s/user=/user=$USER/g" /etc/supervisord.d/couchpotato.ini
+  sed -i "s/user=/user=$USER/g" /etc/supervisord.d/sickrage.ini
   touch $setup
 fi
 
