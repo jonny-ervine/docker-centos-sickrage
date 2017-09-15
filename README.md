@@ -1,8 +1,8 @@
 
 # docker-centos-sickrage
-## SickRage running on the latest CentOS docker image (7.3)
-## Build Version: 7.3
-Date of Build: 10th July 2017
+## SickRage running on the latest CentOS docker image (7.4)
+## Build Version: 2
+Date of Build: 15th September 2017
 
 The Dockerfile should intialise the CentOS image and subscribe to the EPEL repository. The pre-requisites for SickRage are then installed via yum.
 
